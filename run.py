@@ -66,7 +66,7 @@ async def check_trade(telegram, username, csgofloat, trade):
     price_usd = round(contract["price"] / 100, 2)
     item = contract["item"]
     asset_id = item["asset_id"]
-    float_value = item["float_value"]
+    float_value = str(item["float_value"])[:8]
     market_hash_name = item["market_hash_name"]
     stickers = [stick["name"] for stick in item["stickers"]]
     has_screenshot = item["has_screenshot"]

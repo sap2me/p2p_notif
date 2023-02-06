@@ -84,7 +84,7 @@ class Buff:
 
         asset_info = item["asset_info"]
         asset_id = asset_info["assetid"]
-        float_value = asset_info["paintwear"]
+        float_value = str(asset_info["paintwear"])[:8]
         _stickers = asset_info["info"]["stickers"]
         stickers = [stick["name"] for stick in _stickers]
 
