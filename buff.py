@@ -70,12 +70,31 @@ class Buff:
             items = data["items"]
             for item in items:
                 try:
-                    await self.send_item(data, item)
+                    await self.send_item(data, item, "sell")
 
                 except Exception as error:
                     print(repr(error))
 
-    async def send_item(self, data, item):
+    async def fetch_items_bargain(self):
+        url = f"https://buff.163.com/api/market/sell_order/received_bargain"
+        params = {
+            "game": "csgo",
+        }
+        async with self._session.get(url, params=params) as response:
+            raw_data = await response.json()
+            code = raw_data.get("code")
+            if code != "OK":
+                raise ValueError(f"Code is: {code}")
+            data = raw_data["data"]
+            items = data["items"]
+            for item in items:
+                try:
+                    await self.send_item(data, item, "bargain")
+
+                except Exception as error:
+                    print(repr(error))
+
+    async def send_item(self, data, item, mode):
         goods_id = item["goods_id"]
         good = data["goods_infos"][str(goods_id)]
         hash_name = good["market_hash_name"]
@@ -88,6 +107,7 @@ class Buff:
         _stickers = asset_info["info"]["stickers"]
         stickers = [stick["name"] for stick in _stickers]
 
+        bargains = item.get("bargains", [])
         screenshot_url = f"https://s.csgofloat.com/{asset_id}-front.png"
         async with self._session.get(screenshot_url) as response:
             if response.status != 200:
@@ -95,8 +115,13 @@ class Buff:
             else:
                 has_screenshot = True
 
+        if mode == "bargain":
+            top_str = "New bargain for item listed for"
+        else:
+            top_str = "Listing has been purchased for"
+
         msg = (
-            f"<b>BUFF163</b> [{self._username}] - Listing has been purchased for <b>{price_usd}</b> $ ({price_cny} CNY)\n"
+            f"<b>BUFF163</b> {mode.upper()} [{self._username}] - {top_str} <b>{price_usd}</b> $ ({price_cny} CNY)\n"
             f"- hash_name:\n"
             f"      <code>{hash_name}</code>\n"
             f"- float:\n"
@@ -106,6 +131,14 @@ class Buff:
             msg += f"- stickers:\n"
             for sticker in stickers:
                 msg += f"      <code>{sticker}</code>\n"
+
+        if bargains:
+            msg += f"\nBARGAINS:\n"
+        for ind, bargain in enumerate(bargains):
+            bargain_price_cny = float(bargain["price"])
+            bargain_price_usd = cny_to_usd(bargain_price_cny)
+            bargain_msg = bargain.get("buyer_message", "")
+            msg += f"      {ind + 1})<b>{price_usd}</b> $ ({price_cny} CNY) message: {bargain_msg}"
 
         if has_screenshot:
             await self.telegram.send_photo(screenshot_url, msg)  # type: ignore
