@@ -121,7 +121,7 @@ class Buff:
             top_str = "Listing has been purchased for"
 
         msg = (
-            f"<b>BUFF163</b> {mode.upper()} [{self._username}] - {top_str} <b>{price_usd}</b> $ ({price_cny} CNY)\n"
+            f"<b>BUFF163</b> [{self._username}] - {top_str} <b>{price_usd}</b> $ ({price_cny} CNY)\n"
             f"- hash_name:\n"
             f"      <code>{hash_name}</code>\n"
             f"- float:\n"
@@ -133,12 +133,15 @@ class Buff:
                 msg += f"      <code>{sticker}</code>\n"
 
         if bargains:
-            msg += f"\nBARGAINS:\n"
+            msg += f"BARGAINS:\n"
         for ind, bargain in enumerate(bargains):
             bargain_price_cny = float(bargain["price"])
             bargain_price_usd = cny_to_usd(bargain_price_cny)
-            bargain_msg = bargain.get("buyer_message", "")
-            msg += f"      {ind + 1})<b>{price_usd}</b> $ ({price_cny} CNY) message: {bargain_msg}"
+            bargain_msg = bargain.get("buyer_message")
+            if not bargain_msg:
+                bargain_msg = "nothing"
+
+            msg += f"      {ind + 1}) <b>{bargain_price_usd}</b> $ ({bargain_price_cny} CNY) message: {bargain_msg}"
 
         if has_screenshot:
             await self.telegram.send_photo(screenshot_url, msg)  # type: ignore
