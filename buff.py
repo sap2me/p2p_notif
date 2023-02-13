@@ -162,6 +162,7 @@ class Buff:
                 if data["handle_bargain"] > handle_bargain:
                     msg = f"<b>BUFF163</b> [{self._username}] - New bargain/s"
                     await self.telegram.send_message(msg)
+                    await self.fetch_items_bargain()
 
                 if data["send_order"] > send_order:
                     msg = f"<b>BUFF163</b> [{self._username}] - New send order/s"
