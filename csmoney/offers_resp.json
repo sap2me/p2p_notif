@@ -1,0 +1,127 @@
+[
+    {
+        "id": 1717456,
+        "steamOfferId": null,
+        "buyer": {
+            "steamId32": "1760893",
+            "steamId64": "76561197962026621",
+            "token": "https://steamcommunity.com/tradeoffer/new/?partner=1760893&token=rJANtRhr",
+            "name": "So|o™",
+            "avatar": "https://avatars.akamai.steamstatic.com/543bb32f9249e6738288c0d3ac6987ee25983c41_medium.jpg",
+            "registrationDate": 1066100353000
+        },
+        "seller": {
+            "steamId64": "76561199042153366",
+            "name": ""
+        },
+        "createTime": 1676293989000,
+        "lifeTime": 1676338989000,
+        "sellOrders": [
+            {
+                "id": 3629246,
+                "appId": 730,
+                "seller": {
+                    "steamId64": "76561199042153366",
+                    "botId": null,
+                    "delivery": {
+                        "speed": null,
+                        "medianTime": null,
+                        "successRate": null
+                    }
+                },
+                "asset": {
+                    "id": 23359701416,
+                    "names": {
+                        "short": "P250 | Asiimov",
+                        "full": "StatTrak™ P250 | Asiimov (Field-Tested)",
+                        "identifier": 7790
+                    },
+                    "images": {
+                        "steam": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhjxszYI2gS092lnYmGmOHLPr7Vn35cpsB0j7qZoNn32QW2-xJoYGHzd9SWdwQ5ZgvYrFO9kOrn08XouJ_KyCR9-n51cFMXX4s"
+                    },
+                    "isSouvenir": false,
+                    "isStatTrak": true,
+                    "quality": "ft",
+                    "rarity": "Classified",
+                    "pattern": 441,
+                    "type": 5,
+                    "collection": {
+                        "name": "Chroma 3",
+                        "image": null
+                    },
+                    "float": 0.195310190320014,
+                    "inspect": "7837013933779240846",
+                    "rank": null
+                },
+                "stickers": [
+                    {
+                        "collection": {
+                            "name": "Krakow 2017 Legends"
+                        },
+                        "name": "Sticker | Virtus.Pro (Holo) | Krakow 2017",
+                        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vp_holo.e06b2cf4f3b22ff622494d89d2e97859170382a6.png",
+                        "wiki": "https://wiki.cs.money/ru/stickers/sticker-virtus.pro-holo-krakow-2017",
+                        "wear": 0,
+                        "pricing": {
+                            "default": 8.26,
+                            "rarity": 2.1
+                        }
+                    },
+                    {
+                        "collection": {
+                            "name": "Krakow 2017 Legends"
+                        },
+                        "name": "Sticker | Virtus.Pro (Holo) | Krakow 2017",
+                        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vp_holo.e06b2cf4f3b22ff622494d89d2e97859170382a6.png",
+                        "wiki": "https://wiki.cs.money/ru/stickers/sticker-virtus.pro-holo-krakow-2017",
+                        "wear": 0,
+                        "pricing": {
+                            "default": 8.26,
+                            "rarity": 1.4
+                        }
+                    },
+                    {
+                        "collection": {
+                            "name": "Krakow 2017 Legends"
+                        },
+                        "name": "Sticker | Virtus.Pro (Holo) | Krakow 2017",
+                        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vp_holo.e06b2cf4f3b22ff622494d89d2e97859170382a6.png",
+                        "wiki": "https://wiki.cs.money/ru/stickers/sticker-virtus.pro-holo-krakow-2017",
+                        "wear": 0,
+                        "pricing": {
+                            "default": 8.26,
+                            "rarity": 1.4
+                        }
+                    },
+                    {
+                        "collection": {
+                            "name": "Krakow 2017 Legends"
+                        },
+                        "name": "Sticker | Virtus.Pro (Holo) | Krakow 2017",
+                        "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/krakow2017/vp_holo.e06b2cf4f3b22ff622494d89d2e97859170382a6.png",
+                        "wiki": "https://wiki.cs.money/ru/stickers/sticker-virtus.pro-holo-krakow-2017",
+                        "wear": 0,
+                        "pricing": {
+                            "default": 8.26,
+                            "rarity": 0.9
+                        }
+                    }
+                ],
+                "pricing": {
+                    "default": 17.67,
+                    "priceBeforeDiscount": 17.67,
+                    "extra": {
+                        "stickers": 5.8
+                    },
+                    "discount": -0.1036,
+                    "computed": 19.5
+                },
+                "links": {}
+            }
+        ],
+        "amount": 19.5,
+        "type": "SELL",
+        "status": "CREATING",
+        "isRead": false
+    }
+]

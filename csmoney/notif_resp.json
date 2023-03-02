@@ -1,0 +1,54 @@
+{
+    "notifications": [
+        {
+            "data": {
+                "item": {
+                    "name": "StatTrak™ P250 | Asiimov (Field-Tested)",
+                    "count": 1,
+                    "preview": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhjxszYI2gS092lnYmGmOHLPr7Vn35cpsB0j7qZoNn32QW2-xJoYGHzd9SWdwQ5ZgvYrFO9kOrn08XouJ_KyCR9-n51cFMXX4s"
+                }
+            },
+            "type": "OFFER_BOUGHT",
+            "isRead": true,
+            "timestamp": 1676293992161,
+            "createdAt": "2023-02-13T13:13:12.161Z",
+            "id": "63ea3768fc53c064e66c55de",
+            "date": 1676293992161
+        },
+        {
+            "data": {},
+            "type": "TURNED_OFFLINE_API_KEY_INVALID",
+            "isRead": true,
+            "timestamp": 1675624139260,
+            "createdAt": "2023-02-05T19:08:59.260Z",
+            "id": "63dffecbfc53c064e6351fe4",
+            "date": 1675624139260
+        },
+        {
+            "isRead": true,
+            "title": "Epic skin run is complete!",
+            "content": "Guaranteed prizes, as well as raffle prizes, will be uploaded to the winners' virtual inventory until July 7.\n",
+            "timestamp": 1624373955624,
+            "id": "60d1fac343a24a0018603de0",
+            "data": {
+                "title": "Epic skin run is complete!",
+                "description": "Guaranteed prizes, as well as raffle prizes, will be uploaded to the winners' virtual inventory until July 7.\n"
+            },
+            "type": "CHANGE_LOG",
+            "date": 1624373955624
+        },
+        {
+            "isRead": true,
+            "title": "A new filter on stickers has arrived!",
+            "content": "Love skins with cool stickers? Try our new filter for skins with stickers in Pro filters. Check FAQ to learn how to use it.",
+            "timestamp": 1624376324786,
+            "id": "60d204045bc8980019989ff4",
+            "data": {
+                "title": "A new filter on stickers has arrived!",
+                "description": "Love skins with cool stickers? Try our new filter for skins with stickers in Pro filters. Check FAQ to learn how to use it."
+            },
+            "type": "CHANGE_LOG",
+            "date": 1624376324786
+        }
+    ]
+}

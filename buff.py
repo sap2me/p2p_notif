@@ -33,6 +33,8 @@ class Buff:
             cookies=self._account_data["cookies"],
             timeout=aiohttp.ClientTimeout(total=15),
         )
+        self.bargains_ids = set()
+        # self.sellorders_ids = set()
 
     async def fetch_notifications(self):
         url = f"https://buff.163.com/api/message/notification"
@@ -106,6 +108,7 @@ class Buff:
         float_value = str(asset_info["paintwear"])[:8]
         _stickers = asset_info["info"]["stickers"]
         stickers = [stick["name"] for stick in _stickers]
+        sellorder_id = item["id"]
 
         bargains = item.get("bargains", [])
         screenshot_url = f"https://s.csgofloat.com/{asset_id}-front.png"
@@ -138,6 +141,8 @@ class Buff:
             bargain_price_cny = float(bargain["price"])
             bargain_price_usd = cny_to_usd(bargain_price_cny)
             bargain_msg = bargain.get("buyer_message")
+            bargain_id = f"{sellorder_id}_{bargain['id']}"
+
             if not bargain_msg:
                 bargain_msg = "nothing"
 
@@ -174,6 +179,8 @@ class Buff:
                 deliver_order = data["deliver_order"]
                 handle_bargain = data["handle_bargain"]
                 send_order = data["send_order"]
+
+                print(f"{deliver_order} / {handle_bargain} / {send_order}")
 
             except Exception as error:
                 print(repr(error))

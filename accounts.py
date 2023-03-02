@@ -8,8 +8,8 @@ accounts = {
                 "Device-Id": "ooOUtoyPKWQokoJt0ChN",
                 "Locale-Supported": "en",
                 "game": "csgo",
-                "session": "1-DVsPcbjDWb-iz1vltC8yK_CmR9-r1G5zaJs5PswOh5qt2036959358",
-                "csrf_token": "IjNkMDY2Mzc4YjNjODNhNjA0MDliMTRmN2ZiM2M1MTEyMmE5YzkxMGMi.FsCTrQ.RGzRhRx9Crpo2XtCD4UqDEwr1e4",
+                "session": "1-1iRVK-cZb6Wt3ztluIe44P7adW01TCW7xOCq4_5x2AXQ2036959358",
+                "csrf_token": "Ijc3MmZkODBlZGM0YjY5MGVjZmE2ZTFmMzNlOGM3NTEwMzk1YjM1ZGIi.FuJLcQ.FR98wn061iPDTQzl_Bp_k83iIw8",
             }
         },
         "csmoney": {
